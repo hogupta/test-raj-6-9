@@ -1,0 +1,822 @@
+Rajeevnull/ers/config/sgmapping/deployall
+2016-01-27 15:29:49,011 DEBUG  [ers-http-pool59][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter -
+-> getPathInfo=/sgmapping/deployall
+2016-01-27 15:29:49,011 DEBUG  [ers-http-pool59][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getMethod=PUT
+2016-01-27 15:29:49,011 DEBUG  [ers-http-pool59][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmapping/deployall
+2016-01-27 15:29:49,011 DEBUG  [ers-http-pool59][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRemoteHost=171.71.229.98
+2016-01-27 15:29:49,011 DEBUG  [ers-http-pool59][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, 
+it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 2
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 2 network devices
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 
+45c80170-c54c-11e5-a5c4-005056103202
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 
+1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 15:29:49,029 INFO   [ers-http-pool59][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN DEPLOY (2):
+{ersID=LocalBindingDeploymentHandler [deploymentFinished=true, numberOfTargetDevices=0, numberOfAllTargetDevices=1, isDeploy=true, time=1453937351970]}:ersID
+2016-01-27 15:29:49,030 INFO   [ers-http-pool59][] ers.app.impl.handlers.SGMappingCRUDHandler -::::- TRIGGERING DEPLOY WENT WELL
+2016-01-27 15:29:49,030 INFO   [ers-http-pool59][] cisco.cpm.ers.fw.OperationService -::::- The request to perform operation deployall on 
+resource type 'sgmapping Completed Successfully
+2016-01-27 15:29:49,031 DEBUG  [ers-http-pool59][] cpm.ers.app.web.MaxThreadsLimiterFilter -::::-  ## RateLimitFilter Servlet => Continue 
+with the ERS Response, The current bucket count is: 49
+2016-01-27 15:29:55,095 ERROR  [pool-409-thread-2][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- 
+com.cisco.ise.sgtbinding.deploy.SecurityGroupMappingDeployException: : Could not connect: Device not reachable
+	at com.cisco.ise.sgtbinding.deploy.SendMapToDeviceRunnable.run(SendMapToDeviceRunnable.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-01-27 15:29:55,099 ERROR  [pool-409-thread-1][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- 
+com.cisco.ise.sgtbinding.deploy.SecurityGroupMappingDeployException: : Could not connect: Device not reachable
+	at com.cisco.ise.sgtbinding.deploy.SendMapToDeviceRunnable.run(SendMapToDeviceRunnable.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+
+
+https://tb025-ise3.cisco.com:9060/ers/config/sgmapping/1cd61976-2804-4f58-83ef-a9eb5b34c8e2/deploy
+
+Rajeevnull/ers/config/sgmapping/1cd61976-2804-4f58-83ef-a9eb5b34c8e2/deploy
+2016-01-27 15:29:05,828 DEBUG  [ers-http-pool58][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getPathInfo=/sgmapping/1cd61976-2804-4f58-83ef-a9eb5b34c8e2/deploy
+2016-01-27 15:29:05,828 DEBUG  [ers-http-pool58][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getMethod=PUT
+2016-01-27 15:29:05,828 DEBUG  [ers-http-pool58][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmapping/1cd61976-2804-4f58-83ef-a9eb5b34c8e2/deploy
+2016-01-27 15:29:05,828 DEBUG  [ers-http-pool58][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRemoteHost=171.71.229.98
+2016-01-27 15:29:05,828 DEBUG  [ers-http-pool58][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, 
+it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 15:29:05,831 WARN   [ers-http-pool58][] cisco.cpm.ers.fw.AbstractValidator -::::- ers: required impl is missing !
+2016-01-27 15:29:05,846 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 1
+2016-01-27 15:29:05,848 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1 network devices
+2016-01-27 15:29:05,848 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 15:29:05,848 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 
+1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 15:29:05,848 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 15:29:05,849 INFO   [ers-http-pool58][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN DEPLOY (1):{}:ersID
+2016-01-27 15:29:05,870 INFO   [ers-http-pool58][] cisco.cpm.ers.fw.OperationService -::::- The request to perform operation deploy on resource 
+'1cd61976-2804-4f58-83ef-a9eb5b34c8e2' request for resource type 'sgmapping Completed Successfully
+2016-01-27 15:29:05,870 DEBUG  [ers-http-pool58][] cpm.ers.app.web.MaxThreadsLimiterFilter -::::-  ## RateLimitFilter Servlet => Continue with the 
+ERS Response, The current bucket count is: 49
+2016-01-27 15:29:11,966 ERROR  [pool-408-thread-1][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- 
+com.cisco.ise.sgtbinding.deploy.SecurityGroupMappingDeployException: : Could not connect: Device not reachable
+	at com.cisco.ise.sgtbinding.deploy.SendMapToDeviceRunnable.run(SendMapToDeviceRunnable.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+
+Rajeevnull/ers/config/sgmapping/deploy/status
+
+
+2016-01-27 15:31:53,872 DEBUG  [ers-http-pool66][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getPathInfo=/sgmapping/deploy/status
+2016-01-27 15:31:53,872 DEBUG  [ers-http-pool66][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getMethod=GET
+2016-01-27 15:31:53,872 DEBUG  [ers-http-pool66][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmapping/deploy/status
+2016-01-27 15:31:53,872 DEBUG  [ers-http-pool66][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter 
+--> getRemoteHost=171.71.229.98
+2016-01-27 15:31:53,872 DEBUG  [ers-http-pool66][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, 
+it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 2
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- CheckStatus called for all trustsec devices ... 
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 2 network devices
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 
+45c80170-c54c-11e5-a5c4-005056103202
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 
+1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 15:31:53,878 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 15:31:53,879 INFO   [ers-http-pool66][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN CHECK STATUS (1):{}:ersID
+2016-01-27 15:31:53,947 WARN   [ers-http-pool66][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {
+http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+
+
+2016-01-27 15:34:51,022 INFO   [Thread-146][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- REMOVING HANDLER (2):
+{ersID=LocalBindingDeploymentHandler [deploymentFinished=true, numberOfTargetDevices=0, numberOfAllTargetDevices=2, isDeploy=false, 
+time=1453937633603]}:ersID:57418
+2016-01-27 15:34:57,150 INFO   [DefaultQuartzScheduler_Worker-4][] cisco.cpm.infrastructure.utils.GenericUtil -::::- Local hostAlias : 
+Positron-vm-3.demo.local
+2016-01-27 15:34:57,446 INFO   [DefaultQuartzScheduler_Worker-4][] cisco.cpm.infrastructure.utils.FwUtil -::::- Deployment Hosts IPs: 
+[10.0.10.132]iptable Hosts : [10.0.10.132]
+2016-01-27 15:34:57,780 ERROR  [DefaultQuartzScheduler_Worker-4][] cisco.cpm.infrastructure.utils.FwUtil -::::- 
+Error executing the command : /bin/sh /opt/CSCOcpm/bin/cpmadjustfw.sh set_fw_bulk A ISE_FW_ORACLE_CHAIN ACCEPT tcp 1521 /tmp/cpmadjustfwbulk.txt , 
+error: iptables: No chain/target/match by that name.
+2016-01-27 15:34:57,783 INFO   [DefaultQuartzScheduler_Worker-4][] cisco.cpm.infrastructure.utils.FwUtil -::::- 
+syncUpfwList : DB access allowed for ips: []
+
+
+CK STATUS (1):{}:ersID
+2016-01-27 15:50:59,618 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- 
+Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,618 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,642 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,642 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,643 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Exception in handleFault on interceptor org.apache.cxf.binding.xml.interceptor.XMLFaultOutInterceptor@177be8f5
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,643 WARN   [ers-http-pool71][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Exception in handleFault on interceptor org.apache.cxf.binding.xml.interceptor.XMLFaultOutInterceptor@177be8f5
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,643 ERROR  [ers-http-pool71][] org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver -::::- Error occurred during error handling, give up!
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 15:50:59,643 ERROR  [ers-http-pool71][] org.apache.cxf.interceptor.AbstractFaultChainInitiatorObserver -::::- Error occurred during error handling, give up!
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.deployStatus(SGMappingCRUDHandler.java:704)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingCRUDHandler.executeWithReturnValue(SGMappingCRUDHandler.java:611)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGMappingService.deployStatus(SGMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+
+
+https://tb025-ise3.cisco.com:9060/ers/config/sgmappinggroup/deployall
+
+Rajeevnull/ers/config/sgmappinggroup/deployall
+2016-01-27 16:42:37,131 DEBUG  [ers-http-pool10][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getPathInfo=/sgmappinggroup/deployall
+2016-01-27 16:42:37,131 DEBUG  [ers-http-pool10][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getMethod=PUT
+2016-01-27 16:42:37,131 DEBUG  [ers-http-pool10][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmappinggroup/deployall
+2016-01-27 16:42:37,131 DEBUG  [ers-http-pool10][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRemoteHost=171.71.229.98
+2016-01-27 16:42:37,131 DEBUG  [ers-http-pool10][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 16:42:37,138 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 1
+2016-01-27 16:42:37,138 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1 network devices
+2016-01-27 16:42:37,138 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 16:42:37,138 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 16:42:37,138 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 16:42:37,139 INFO   [ers-http-pool10][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN DEPLOY (1):{}:ersID
+2016-01-27 16:42:37,171 INFO   [ers-http-pool10][] ers.app.impl.handlers.SGMappingGroupCRUDHandler -::::- TRIGGERING DEPLOY WENT WELL
+2016-01-27 16:42:37,171 INFO   [ers-http-pool10][] cisco.cpm.ers.fw.OperationService -::::- The request to perform operation deployall on resource type 'sgmappinggroup Completed Successfully
+2016-01-27 16:42:37,172 DEBUG  [ers-http-pool10][] cpm.ers.app.web.MaxThreadsLimiterFilter -::::-  ## RateLimitFilter Servlet => Continue with the ERS Response, The current bucket count is: 49
+2016-01-27 16:42:44,232 ERROR  [pool-321-thread-1][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- 
+com.cisco.ise.sgtbinding.deploy.SecurityGroupMappingDeployException: : Could not connect: Device not reachable
+	at com.cisco.ise.sgtbinding.deploy.SendMapToDeviceRunnable.run(SendMapToDeviceRunnable.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+https://tb025-ise3.cisco.com:9060/ers/config/sgmappinggroup/e9d7cab6-4682-4abd-9667-35ce4232156a/deploy
+
+
+Rajeevnull/ers/config/sgmappinggroup/e9d7cab6-4682-4abd-9667-35ce4232156a/deploy
+2016-01-27 16:48:23,960 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getPathInfo=/sgmappinggroup/e9d7cab6-4682-4abd-9667-35ce4232156a/deploy
+2016-01-27 16:48:23,960 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getMethod=PUT
+2016-01-27 16:48:23,960 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmappinggroup/e9d7cab6-4682-4abd-9667-35ce4232156a/deploy
+2016-01-27 16:48:23,960 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRemoteHost=171.71.229.98
+2016-01-27 16:48:23,960 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 16:48:23,964 WARN   [ers-http-pool14][] cisco.cpm.ers.fw.AbstractValidator -::::- ers: required impl is missing !
+2016-01-27 16:48:23,999 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 1
+2016-01-27 16:48:24,000 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1 network devices
+2016-01-27 16:48:24,000 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 16:48:24,000 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 16:48:24,000 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 16:48:24,000 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN DEPLOY (1):{}:ersID
+2016-01-27 16:48:24,001 INFO   [ers-http-pool14][] cisco.cpm.ers.fw.OperationService -::::- The request to perform operation deploy on resource 'e9d7cab6-4682-4abd-9667-35ce4232156a' request for resource type 'sgmappinggroup Completed Successfully
+2016-01-27 16:48:24,023 DEBUG  [ers-http-pool14][] cpm.ers.app.web.MaxThreadsLimiterFilter -::::-  ## RateLimitFilter Servlet => Continue with the ERS Response, The current bucket count is: 49
+2016-01-27 16:48:30,095 ERROR  [pool-323-thread-1][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- 
+com.cisco.ise.sgtbinding.deploy.SecurityGroupMappingDeployException: : Could not connect: Device not reachable
+	at com.cisco.ise.sgtbinding.deploy.SendMapToDeviceRunnable.run(SendMapToDeviceRunnable.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Rajeevnull/ers/config/sgmappinggroup/deploy/status
+2016-01-27 16:49:45,981 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getPathInfo=/sgmappinggroup/deploy/status
+2016-01-27 16:49:45,981 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getMethod=GET
+2016-01-27 16:49:45,981 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRequestURL=https://tb025-ise3.cisco.com:9060/ers/config/sgmappinggroup/deploy/status
+2016-01-27 16:49:45,981 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter --> getRemoteHost=171.71.229.98
+2016-01-27 16:49:45,981 DEBUG  [ers-http-pool14][] cpm.ers.app.web.SponsorSessionAttributesFilter -::::- #### SponsorSessionAttributesFilter.doFilter, it is not a sponosr , it will not perform in SponsorSessionAttributeFilter !
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.admin.SgtManagerImpl -::::- bindingAttrs.size() 3
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- CheckStatus called for all trustsec devices ... 
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 2 network devices
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* BEGIN DEVICES *********
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 45c80170-c54c-11e5-a5c4-005056103202
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- Deploying bindings for 1efcf9b0-c54c-11e5-a5c4-005056103202
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.BindingDeployer -::::- ********* END DEVICES *********
+2016-01-27 16:49:46,007 INFO   [ers-http-pool14][] cisco.ise.sgtbinding.deploy.LocalBindingDeploymentManager -::::- IN CHECK STATUS (1):{}:ersID
+2016-01-27 16:49:46,084 WARN   [ers-http-pool14][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+	at org.apache.cxf.service.invoker.AbstractInvoker.createFault(AbstractInvoker.java:155)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:121)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:133)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:82)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.cxf.workqueue.SynchronousExecutor.execute(SynchronousExecutor.java:37)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:106)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:243)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:110)
+	at org.apache.cxf.transport.servlet.ServletDestination.invoke(ServletDestination.java:98)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:423)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:139)
+	at org.apache.cxf.transport.servlet.AbstractCXFServlet.invoke(AbstractCXFServlet.java:142)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:179)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:108)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:159)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.SponsorSessionAttributesFilter.doFilter(SponsorSessionAttributesFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.XssCheckFilter.doFilter(XssCheckFilter.java:100)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.AtnAtzFilter.doFilter(AtnAtzFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.PAPFilter.doFilter(PAPFilter.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.cisco.cpm.ers.app.web.MaxThreadsLimiterFilter.doFilter(MaxThreadsLimiterFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.authenticator.SingleSignOn.invoke(SingleSignOn.java:240)
+	at org.apache.catalina.valves.MethodsValve.invoke(MethodsValve.java:52)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: Should not happen ...
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingGroupCRUDHandler.deployStatus(SGMappingGroupCRUDHandler.java:519)
+	at com.cisco.cpm.ers.app.impl.handlers.SGMappingGroupCRUDHandler.executeWithReturnValue(SGMappingGroupCRUDHandler.java:403)
+	at com.cisco.cpm.ers.fw.ResourceHandlerFacade.executeWithReturnValue(ResourceHandlerFacade.java:299)
+	at com.cisco.cpm.ers.fw.OperationService.executeOperation(OperationService.java:77)
+	at com.cisco.cpm.ers.app.impl.service.SGGroupMappingService.deployStatus(SGGroupMappingService.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:173)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:89)
+	... 53 more
+2016-01-27 16:49:46,084 WARN   [ers-http-pool14][] org.apache.cxf.phase.PhaseInterceptorChain -::::- Application {http://service.impl.app.ers.cpm.cisco.com/}InternalUserService has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Should not happen ...
+
+
+

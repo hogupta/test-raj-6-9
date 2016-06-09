@@ -1,0 +1,289 @@
+SgtManagerImpl	NetworkManagerImpl	SGTStaticMappingUIApi BindingManager IpSGTStaticMappingListView.js
+
+<resource resourceType="sgtlocalbindings" description="SGT Local Bindings" namespace="sxp" currentVersion="1.0" supportedVersions="1.0">
+       	<resourceClass>com.cisco.cpm.ers.app.model.sxp.ERSSgtBinding</resourceClass>
+        <validatorClass>com.cisco.cpm.ers.app.impl.validators.SgtBindingValidator</validatorClass>
+        <converterClass>com.cisco.cpm.ers.app.impl.converters.SgtBindingConverter</converterClass>
+        <crudHandlerClass>com.cisco.cpm.ers.app.impl.handlers.SgtBindingCRUDHandler</crudHandlerClass>
+        <bulkRequestClass>com.cisco.cpm.ers.app.model.sxp.SgtBindingBulkRequest</bulkRequestClass>
+        <filter filterFields="name,description"/>
+        <sort sortFields="name,description"/>
+        <paging pageSize="20"/>
+        <revisionHistory initialISEVersion="2.0" />
+    </resource>
+    
+
+@POST
+    @Path("/exportBindings")
+    public Map<String, List<String>> exportBindings(Object bindingIds){
+    	Map<String, List<String>> map = new HashMap<>(2);
+    	
+    	try {
+
+            map.put("success", SgtManagerImpl.getInstance().getBindingsForExport(null)); 
+    		
+    	} catch (SgtMgrException e) {
+            LOG.error("Error occured in exporting bindings with message: " + e.getMessage() );
+            map.put("error", Arrays.asList("Server Error while exporting bindings  " + e.getMessage() ));
+        }
+    	return map;
+    }
+    
+    @POST
+    @Path("/csvupload")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public Map<String, List<String>> uploadFile(MultipartBody multipartBody){
+        LOG.info("Inside Connections uploadFile()...");
+        Map<String, List<String>> map = new HashMap<>(2);
+        InputStream in = null;
+        
+        try {
+            List<Attachment> attachments = multipartBody.getAllAttachments();
+           
+            in = attachments.get(0).getDataHandler().getInputStream();
+            
+            BindingReader.ImportResponse res = BindingReader.importStaticBindings(in);
+            
+            map.put("errors", res.getErrors());
+            map.put("success", res.getObjectIds());  
+            LOG.info("Done! return Map to UI: " + map);
+            return map;
+        } catch (RuntimeException e) {
+            LOG.error("Internal error occured in uploadFile with message: " + e.getMessage() );
+            map.put("exception", Arrays.asList("Server Error while importing CSV file: " + e.getMessage() ));
+            return map;
+        } catch (Exception e) {
+            LOG.error("Error occured in uploadFile with message: " + e.getMessage() );
+            map.put("exception", Arrays.asList("Server Error while importing CSV file: " + e.getMessage() ));
+            return map;
+        } finally {
+        	if (in != null) {
+        		try {
+					in.close();
+				} catch (IOException e) {
+				}
+        	}
+        }
+    }
+
+
+		/*******************************************************************************
+ * Copyright (c) 2015 Cisco Systems, Inc.
+ * All rights reserved.
+ *******************************************************************************/
+package com.cisco.cpm.pxgridwebapp.ise.rest;
+
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.namespace.QName;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.StartElement;
+import javax.xml.stream.events.XMLEvent;
+
+import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.search.SearchHit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cisco.cpm.mdm.util.MDMUtil;
+import com.cisco.ise.vcs.base.VCSConstants;
+import com.cisco.ise.vcs.query.CRQuery;
+import com.cisco.ise.vcs.query.CRQueryBuilder;
+import com.cisco.ise.vcs.query.CompoundFilter;
+import com.cisco.ise.vcs.query.SimpleFilter;
+import com.cisco.ise.vcs.query.CompoundFilter.CombiningLogic;
+import com.cisco.ise.vcs.query.util.CRQueryUtil;
+import com.cisco.pxgrid.stub.identity.sd.util.XMLEventListener;
+import com.cisco.pxgrid.stub.identity.sd.util.XMLEventWriterWrapper;
+import com.cisco.profiler.common.ProfilerException;
+import com.cisco.profiler.im.EndPoint;
+import com.cisco.pxgrid.model.identity.GetAllMDMEndpointListResponse;
+import com.cisco.pxgrid.model.identity.GetAllMDMEndpointListRequest;
+import com.cisco.pxgrid.model.net.MDMEndpoint;
+
+
+@Controller
+@RequestMapping("/mdm/bd")
+public class MdmREST {
+	protected static final Logger log = LoggerFactory.getLogger(MdmREST.class);
+
+	private static final String XGRIDNET_NS = "http://www.cisco.com/pxgrid/net"; 
+	
+	public static final String MDM_ENDPOINTS = "mdmEndpoints";
+	public static final String MDM_ENDPOINT = "mdmEndpoint";
+	public static final String CONTEXT_MAC = VCSConstants.MAC_ADDRESS;
+	public static final String CONTEXT_STAT = VCSConstants.STATUS; 
+	public static final String CONTEXT_DISCON = VCSConstants.STATUS_ENUM.DISCONNECTED.getStrRep();
+	//public static final String CONTEXT_MDMSERVERID = VCSConstants.MDM_SERVERID;
+	public static final String CONTEXT_MDMSERVERID = VCSConstants.USERNAME;
+	public static final int START_COUNTER = 0;
+	public static final int END_COUNTER = 5;
+
+	@RequestMapping(value = "/getAllMdmEndpointList", method = RequestMethod.POST,
+			consumes = MediaType.APPLICATION_XML_VALUE,
+			produces = MediaType.APPLICATION_XML_VALUE)
+	@ResponseBody
+	public void getAllMDMEndpointList(
+				@RequestBody GetAllMDMEndpointListRequest timeRequest,
+				OutputStream output) throws XMLStreamException, JAXBException {
+		
+		if( log.isDebugEnabled() ) {
+			log.debug("\n\n Inside new Rest getAllMDMEndpointList of MdmREST");
+		}
+		
+		//final String beginDate = timeRequest.getStartDate();
+		//final String endDate = timeRequest.getEndDate();
+		
+		final String beginDate = null;
+		final String endDate = null;
+		
+		//Calendar cal = Calendar.getInstance();
+		//SimpleDateFormat sdf = new SimpleDateFormat("MMM dd HH:mm:ss z yyyy", Locale.US);
+
+		GetAllMDMEndpointListResponse response = new GetAllMDMEndpointListResponse();
+		
+		// Insert an empty mdm endpoint list for now, the real end points will be injected at streaming time
+		response.setMdmEndpoints(new ArrayList<MDMEndpoint>());
+	
+		XMLOutputFactory xof = XMLOutputFactory.newInstance();
+		XMLEventWriter writer = xof.createXMLEventWriter(output);
+		final List<EndPoint> epListTmp;
+		
+		final JAXBContext jc = JAXBContext.newInstance(GetAllMDMEndpointListResponse.class);
+		final Marshaller m = jc.createMarshaller();
+
+		int startCounter = START_COUNTER;
+		int endCounter = END_COUNTER;
+		final List<String> macIds = getEndPointsWithNoSession(startCounter, endCounter);
+		
+		try {
+			epListTmp =  MDMUtil.getEndPoints(beginDate, endDate, macIds);
+			
+			if( log.isDebugEnabled() ) {
+				log.debug("MDMUtil.getEndPoints = {}", epListTmp.size());
+			}
+			
+		} catch (ProfilerException pex) {
+			log.error(pex.getMessage(), pex);
+			throw new XMLStreamException(pex);
+		} 
+
+		XMLEventWriterWrapper wrapper = new XMLEventWriterWrapper(writer,
+				new XMLEventListener() {
+	
+			@Override
+			public void afterAdd(final XMLEventWriter writer,
+					XMLEvent event) throws XMLStreamException {
+				if (event != null && event.getEventType() == XMLEvent.START_ELEMENT) {
+					StartElement startE = (StartElement) event;
+
+					try {
+						if (startE.getName().getLocalPart()
+								.equals(MDM_ENDPOINTS)) {
+							final Marshaller m2 = jc.createMarshaller();
+							m2.setProperty(Marshaller.JAXB_FRAGMENT,
+									true);
+							
+							MDMEndpoint mdmModelContent = null;
+							for (EndPoint ep: epListTmp) {
+
+						        mdmModelContent = new MDMEndpoint();
+
+						        mdmModelContent.setMacAddress(ep.getMac());
+					            mdmModelContent.setOsVersion(ep.getMDMOSVersion());
+					            mdmModelContent.setRegistrationStatus(ep.getDeviceRegistrationStatusStr());
+					            mdmModelContent.setComplianceStatus(String.valueOf(ep.isMDMCompliant()));
+					            mdmModelContent.setDiskEncryptionStatus(String.valueOf(ep.isMDMDiskEncrypted()));
+					            mdmModelContent.setJailBroken(String.valueOf(ep.isMDMJailBroken()));
+					            mdmModelContent.setPinLocked(String.valueOf(ep.isMDMPinLockSet()));
+					            mdmModelContent.setModel(ep.getMDMModel());
+					            mdmModelContent.setManufacturer(ep.getMDMManufacturer());
+					            mdmModelContent.setImei(ep.getMDMImei());
+
+						        m2.marshal(
+										new JAXBElement<MDMEndpoint>(
+												new QName(
+														XGRIDNET_NS,
+														MDM_ENDPOINT),
+														MDMEndpoint.class,
+												        mdmModelContent),
+										writer);
+					        }
+							
+						}
+					} catch (Exception ex) {
+						log.error(ex.getMessage(), ex);
+						throw new XMLStreamException(ex);
+					}
+				}
+			}
+		});
+	
+		m.marshal(response, wrapper);
+		wrapper.flush();
+	}
+	
+	private List<String> getEndPointsWithNoSession(int startCounter, int endCounter) {
+		
+		SimpleFilter mdmServerId = new SimpleFilter();
+		SimpleFilter contextStat = new SimpleFilter();
+		
+		mdmServerId.setField(CONTEXT_MDMSERVERID);
+		contextStat.setField(CONTEXT_STAT);
+		
+		mdmServerId.setCondition(SimpleFilter.Condition.ISNOTEMPTY);
+		contextStat.setCondition(SimpleFilter.Condition.EQUALS);
+		
+		contextStat.setValue(CONTEXT_DISCON);
+		
+		CompoundFilter cfilter1 = CRQueryUtil.createCompoundFilter(CombiningLogic.AND, mdmServerId, contextStat);
+	
+		CRQuery query = new CRQueryBuilder().fields(CONTEXT_MAC).setEndIndex(endCounter).
+				setStartIndex(startCounter).setFilter(cfilter1).build();
+	
+		SearchResponse searchResponse = query.execute();
+		List<String> macIdsRet = new ArrayList<String>();
+		
+		Iterator<SearchHit> searchHit= searchResponse.getHits().iterator();
+		
+		int totalSize = (int) searchResponse.getHits().getTotalHits();
+		
+		if( log.isDebugEnabled() ) {
+			log.debug("\n\n getEndPointsWithNoSession response from Context repo {}", totalSize);
+		}
+		
+		SearchHit searchHitTmp = null;
+		Map<String, Object> map = null;
+		if( searchHit != null) {
+			while (searchHit.hasNext()) {
+				searchHitTmp = searchHit.next();
+				if( searchHitTmp != null ) {
+					map = searchHitTmp.getSource();
+					
+					if( map != null && map.get(CONTEXT_MAC) != null )
+						macIdsRet.add( (String)searchHitTmp.getSource().get(CONTEXT_MAC) );
+				}
+			}
+		}
+		
+		return macIdsRet;
+		
+	}
+	
+}
